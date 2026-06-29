@@ -1,0 +1,22 @@
+A
+B
+C
+D
+E
+F
+G
+H
+Saída
+Saida
+A B
+A C
+B D
+C D
+C E
+B E
+D F
+E F
+F G
+G H
+H Saída
+D Saida
