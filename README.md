@@ -24,17 +24,19 @@ A principal motivação para a escolha do BFS é sua capacidade de encontrar a r
 
 Tela inicial do programa
 
-![Tela inicial](assets/menu.png)
-
-Tela de cadastro de salas e corredores
-
-![Cadastro](assets/cadastro.png)
+![Tela inicial](assets/telainicial.png)
 
 Tela de exibição do mapa e rota de fuga
 
-![Listagem](assets/listagem.png)
+![Rota de fuga](assets/RotaSaída.png)
+
+Tela de exibição do mapa e rota de fuga com bloqueio (corredor em chamas)
+
+![Rota de fuga com bloqueio](assets/RotaBloqueio.png)
 
 ---
+
+## Vídeo da apresentação 
 
 ## Instalação
 
@@ -64,5 +66,16 @@ python main.py gui
 
 ### Busca em Largura (BFS)
 
-O BFS explora o grafo em níveis, visitando primeiro todos os nós a distância 1, depois distância 2 e assim por diante. Isso permite encontrar o menor caminho em número de arestas quando o grafo não é ponderado.
+O projeto usa BFS para encontrar a saída mais próxima a partir da sala informada pelo usuário. Como o prédio é modelado como um grafo não ponderado, a busca visita primeiro as salas mais próximas e só depois avança para as demais.
+
+O algoritmo trabalha com uma fila, um conjunto de salas visitadas e um registro de predecessores. Esses predecessores permitem reconstruir o caminho completo depois que uma saída é encontrada.
+
+Na prática, isso significa que:
+
+- a busca começa na sala de origem;
+- cada sala visitada é marcada para evitar repetição;
+- os corredores bloqueados deixam de ser considerados na rota;
+- a primeira saída alcançada representa o menor caminho em número de corredores.
+
+Por esse motivo, o BFS é adequado para simular evacuação: ele é simples, eficiente e encontra rapidamente uma rota válida quando existe caminho até uma saída. Em termos de complexidade, o custo é proporcional ao número de salas e corredores do prédio.
 
