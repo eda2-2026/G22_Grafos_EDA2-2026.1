@@ -38,6 +38,8 @@ Tela de exibição do mapa e rota de fuga com bloqueio (corredor em chamas)
 
 ## Vídeo da apresentação 
 
+[clique aqui para assistir](https://youtu.be/Ek5AteWdXDU)
+
 ## Instalação
 
 ### Pré-requisitos
